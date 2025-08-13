@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "max's wplace helper",
+  "version": "1.0",
+  "description": "import and pixelate images for wplace.live",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://wplace.live/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
